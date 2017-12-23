@@ -62,7 +62,7 @@ for epoch in range(args.epoch):
     for iterate in range(train_len):
     
         for i in range(batchsize):
-            batch = input_data.get_image(iterate)
+            batch = input_data.get_image(iterate+i)
             input_x_np[i,:] = np.asarray(batch[0])
             input_real_np[i,:] = np.asarray(batch[1])
 
